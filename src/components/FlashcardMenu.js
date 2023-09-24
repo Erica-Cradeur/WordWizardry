@@ -1,5 +1,6 @@
 import React from 'react';
 import premadeSet1 from './flashcardSets/premadeSet1.js';
+import premadeSet2 from './flashcardSets/premadeSet2.js';
 
 const FlashcardMenu = ({
   flashcardSets,
@@ -7,7 +8,7 @@ const FlashcardMenu = ({
   isMenuOpen,
   onCloseMenu,
   onPremadeSetClick,
-  onBackToLandingClick, // Add this prop
+  onBackToLandingClick,
 }) => {
   const menuClassName = `flashcard-menu ${isMenuOpen ? 'open' : ''}`;
 
@@ -16,7 +17,7 @@ const FlashcardMenu = ({
       <button className="close-button" onClick={onCloseMenu}>
         x
       </button>
-      <h2>Flashcard Sets</h2>
+      <h2>Vocabulary Sets</h2>
       <ul>
         {flashcardSets.map((set, index) => (
           <li key={index} onClick={() => onSelectSet(set)}>
@@ -24,8 +25,8 @@ const FlashcardMenu = ({
           </li>
         ))}
       </ul>
-      <h2>Premade Sets</h2>
-      <button onClick={() => onPremadeSetClick(premadeSet1)}>Premade Set 1</button>
+      <button onClick={() => onPremadeSetClick(premadeSet1)}>meow</button>
+      <button onClick={() => onPremadeSetClick(premadeSet2)}>woof</button>
       <div>
         <button onClick={onBackToLandingClick}>Back to Landing Page</button>
       </div>

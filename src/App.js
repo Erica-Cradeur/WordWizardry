@@ -3,17 +3,19 @@ import './App.css';
 import FlashcardList from './components/FlashcardList';
 import Flashcard from './components/Flashcard';
 import FlashcardMenu from './components/FlashcardMenu';
+import FlashcardListMode from './components/FlashcardListMode'; // Import the new component
 import premadeSet1 from './components/flashcardSets/premadeSet1';
+import premadeSet2 from './components/flashcardSets/premadeSet2';
 
 function App() {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [flashcardSets, setFlashcardSets] = useState([]);
   const [selectedSet, setSelectedSet] = useState(null);
-
   const [flashcards, setFlashcards] = useState([]);
   const [isFlashcardMode, setFlashcardMode] = useState(false);
   const [currentCardIndex, setCurrentCardIndex] = useState(null);
-  const [currentPremadeCardIndex, setCurrentPremadeCardIndex] = useState(null); // Track premade set card index
+  const [isLandingPage, setLandingPage] = useState(true);
+  const [isListMode, setListMode] = useState(false);
 
   useEffect(() => {
     const storedSets = JSON.parse(localStorage.getItem('flashcardSets')) || [];
@@ -30,15 +32,18 @@ function App() {
 
   const selectSet = (set) => {
     setSelectedSet(set);
-    setMenuOpen(false); // Close the menu
-    setCurrentCardIndex(null); // Reset current card index
-    setCurrentPremadeCardIndex(null); // Reset current premade card index
+    setMenuOpen(false);
+    setCurrentCardIndex(null);
+    setFlashcardMode(false);
+    setLandingPage(false);
   };
 
   const handlePremadeSetClick = (premadeSet) => {
-    setFlashcardMode(true); // Set flashcard mode to true
-    setSelectedSet(premadeSet); // Select the premade set
-    setCurrentCardIndex(0); // Initialize current card index to 0
+    setSelectedSet(premadeSet);
+    setCurrentCardIndex(0);
+    setLandingPage(false);
+    setFlashcardMode(false); // Ensure flashcard mode is turned off
+    setListMode(true); // Turn on list mode
   };
   
 
@@ -61,72 +66,19 @@ function App() {
 
     let newIndex;
 
-    if (currentPremadeCardIndex === null) {
-      // If no premade card is selected, start with the first one
-      newIndex = 0;
-    } else {
-      // Otherwise, move to the next card if available
-      newIndex = currentPremadeCardIndex + 1;
+    if (isFlashcardMode) {
+      // If in flashcard mode, increment the current index
+      newIndex = currentCardIndex === null ? 0 : currentCardIndex + 1;
+
       if (newIndex >= selectedSet.flashcards.length) {
-        newIndex = 0; // Loop back to the first card
+        newIndex = 0;
       }
+    } else {
+      // If not in flashcard mode, generate a random index
+      newIndex = Math.floor(Math.random() * selectedSet.flashcards.length);
     }
 
-    setCurrentPremadeCardIndex(newIndex); // Update the current premade card index
-  };
-
-  const handleAddCard = () => {
-    const promptContainer = document.createElement('div');
-    promptContainer.className = 'centered-prompt';
-
-    const promptContent = document.createElement('div');
-    promptContent.className = 'prompt-content';
-
-    const closeButton = document.createElement('button');
-    closeButton.className = 'close-button';
-    closeButton.textContent = 'x';
-
-    const cancelAddCard = () => {
-      document.body.removeChild(promptContainer);
-    };
-
-    closeButton.addEventListener('click', cancelAddCard);
-
-    const englishInput = document.createElement('input');
-    englishInput.placeholder = 'English Word';
-    const frenchInput = document.createElement('input');
-    frenchInput.placeholder = 'French Word';
-    const phoneticInput = document.createElement('input');
-    phoneticInput.placeholder = 'Phonetic Word';
-
-    const addButton = document.createElement('button');
-    addButton.textContent = 'Add Flashcard';
-
-    addButton.addEventListener('click', () => {
-      const englishWord = englishInput.value.trim();
-      const frenchWord = frenchInput.value.trim();
-      const phoneticWord = phoneticInput.value.trim();
-
-      if (englishWord && frenchWord && phoneticWord) {
-        const newFlashcard = {
-          id: Date.now(),
-          english: englishWord,
-          french: frenchWord,
-          phonetic: phoneticWord,
-        };
-        setFlashcards([...flashcards, newFlashcard]);
-
-        document.body.removeChild(promptContainer);
-      }
-    });
-
-    promptContent.appendChild(closeButton);
-    promptContent.appendChild(englishInput);
-    promptContent.appendChild(frenchInput);
-    promptContent.appendChild(phoneticInput);
-    promptContent.appendChild(addButton);
-    promptContainer.appendChild(promptContent);
-    document.body.appendChild(promptContainer);
+    setCurrentCardIndex(newIndex);
   };
 
   const handleDeleteCard = (id) => {
@@ -145,9 +97,8 @@ function App() {
 
   const toggleMode = () => {
     setFlashcardMode(!isFlashcardMode);
+    setListMode(!isListMode);
   };
-
-  const [isLandingPage, setLandingPage] = useState(true);
 
   const handleBackToLandingClick = () => {
     setSelectedSet(null);
@@ -167,7 +118,7 @@ function App() {
           isMenuOpen={isMenuOpen}
           onCloseMenu={handleCloseMenu}
           onPremadeSetClick={handlePremadeSetClick}
-          onBackToLandingClick={handleBackToLandingClick}
+          onBackToLandingClick={handleBackToLandingClick} // Pass the function here
         />
       )}
 
@@ -181,50 +132,31 @@ function App() {
             )}
           </button>
         </div>
-        {selectedSet === null && (
-          <div className="add-card">
-            <button onClick={handleAddCard}>
-              <img id="addButton" src={process.env.PUBLIC_URL + 'plus-solid.svg'} alt="addButton" />
-            </button>
-          </div>
-        )}
       </div>
 
       <div className="flashcard-container">
-        {selectedSet && isFlashcardMode ? (
+        {isLandingPage ? (
+          <div>
+            <h1>Welcome!</h1>
+            <p>Select a flashcard set to get started.</p>
+          </div>
+        ) : selectedSet && isFlashcardMode ? (
           <FlashcardList
             flashcards={selectedSet.flashcards}
-            onDelete={handleDeleteCard} // Pass handleDeleteCard as a prop
-            onUpdate={handleUpdateCard} // Pass handleUpdateCard as a prop
-            isFlashcardMode={isFlashcardMode}
-            currentCardIndex={currentCardIndex}
-            displayNextCard={displayNextCard}
-          />
-        
-        ) : isFlashcardMode ? (
-          <div>
-            {currentCardIndex !== null && flashcards.length > 0 && (
-              <Flashcard
-                card={flashcards[currentCardIndex]}
-                onDelete={handleDeleteCard}
-                onUpdate={handleUpdateCard}
-              />
-            )}
-            {flashcards.length > 0 && (
-              <button className="NextButton" onClick={displayNextCard}>
-                Next
-              </button>
-            )}
-          </div>
-        ) : (
-          <FlashcardList
-            flashcards={flashcards}
             onDelete={handleDeleteCard}
             onUpdate={handleUpdateCard}
             isFlashcardMode={isFlashcardMode}
             currentCardIndex={currentCardIndex}
             displayNextCard={displayNextCard}
           />
+          
+        ) : isListMode && selectedSet && (
+          <FlashcardListMode flashcards={selectedSet.flashcards} /> // Render the new component in list mode
+        )}
+        {selectedSet && !isFlashcardMode && !isListMode && (
+          <button className="back-to-landing" onClick={handleBackToLandingClick}>
+            Back to Landing Page
+          </button>
         )}
       </div>
     </div>

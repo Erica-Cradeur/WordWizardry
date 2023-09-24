@@ -1,17 +1,17 @@
 const premadeSet1 = {
-  name: 'Premade Set 1',
+  name: 'meow',
   flashcards: [
     {
       id: 1,
-      english: 'English Word 1',
-      french: 'French Word 1',
-      phonetic: 'Phonetic Word 1',
+      english: 'meow',
+      french: 'meowf',
+      phonetic: 'meeow',
     },
     {
       id: 2,
-      english: 'English Word 2',
-      french: 'French Word 2',
-      phonetic: 'Phonetic Word 2',
+      english: 'meow2',
+      french: 'meowf2',
+      phonetic: 'meeow2',
     },
     // Add more flashcards as needed
   ],
