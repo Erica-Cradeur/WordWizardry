@@ -1,38 +1,137 @@
+*{
+  font-family: 'Martian Mono', monospace;
+  color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-color: black;
+  background-image: url('/public/henry-be-TCsCykbwSJw-unsplash(1).jpg');
+}
+
 .App {
   text-align: center;
+  margin: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.flashcard {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.flashcard-list{
+  display:flex;
+  flex-flow: row wrap;
+  padding-top: 1em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flashcard textarea {
+  width: 100%;
+  height: 100px;
+}
+
+.add-card {
+  margin: 20px 0;
+}
+
+.add-card input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-right: 10px;
+}
+
+.add-card button {
+  padding: 5px 10px;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.centered-prompt {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}
+
+.prompt-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+  margin: 5em;
+}
+
+#mainLogo{
+  width: 7.5em;
+  padding-left: 1em;
+  position:fixed;
+  left:0;
+  top:0;
+}
+
+.NextButton{
+  font-size: 20px;
+  background: none;
+	color: inherit;
+	border: solid #75918B;
+  border-radius: .5em;
+  margin-top: 1em;
+	padding: 1em;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+
+}
+
+#toggleButton, #addButton{
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+/* Add this to your App.css */
+.flashcard-menu-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  z-index: 999; /* Ensure it appears on top of other content */
 }
 
-.App-link {
-  color: #61dafb;
+.flashcard-menu {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  max-width: 80%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* You can style the rest of your menu elements here */
