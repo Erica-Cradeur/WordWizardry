@@ -32,15 +32,23 @@
     align-items: center;
     justify-content: center;
   }
-  
+
   .flashcard.flipped {
     transform: rotateY(180deg);
+    justify-content: center;
   }
   
   .flashcard-back {
     transform: rotateY(180deg);
-    background-color: none;
-    text-align: center;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #flashcardTextAreaBack{
+    height: 5em;
+    width: auto;
+    background: transparent;
   }
 
 @media screen and (max-width: 768px) {
@@ -62,6 +70,7 @@
     border: none;
     background-color: transparent;
     text-decoration: none;
+    cursor: pointer;
   }
 
   #buttons{
@@ -69,14 +78,16 @@
     right:0;
     bottom:0;
     position:absolute;
+    
   }
 
   #FlashcardTextArea{
     border: none;
     text-align: center;
     background: transparent;
-    margin-top: 5em;
-    margin-bottom: 4em;
+    margin-top: 2em;
+    height: 3em;
+    width: 100%;
   }
 
   .saveButton{
@@ -85,12 +96,11 @@
     bottom:0;
     position:absolute;
     text-decoration: none;
-
     background: none;
-	color: inherit;
-	border: none;
-	padding: 0;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
+	  color: inherit;
+	  border: none;
+	  padding: 0;
+	  font: inherit;
+	  cursor: pointer;
+	  outline: inherit;
   }
