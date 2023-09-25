@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 
-// Existing FlashcardList component remains unchanged
-
 const FlashcardListMode = ({ flashcards }) => {
   const [showDetailsIndex, setShowDetailsIndex] = useState(null);
 
@@ -11,9 +9,8 @@ const FlashcardListMode = ({ flashcards }) => {
 
   return (
     <div className="flashcard-list">
-      <ul>
         {flashcards.map((flashcard, index) => (
-          <li key={flashcard.id}>
+          <p key={flashcard.id}>
             <div className="flashcard">
               <p>{flashcard.english}</p>
               <button onClick={toggleDetails.bind(null, index)}>Show</button>
@@ -24,9 +21,8 @@ const FlashcardListMode = ({ flashcards }) => {
                 <p>Phonetic: {flashcard.phonetic}</p>
               </div>
             )}
-          </li>
+          </p>
         ))}
-      </ul>
     </div>
   );
 };

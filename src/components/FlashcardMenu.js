@@ -12,6 +12,11 @@ const FlashcardMenu = ({
 }) => {
   const menuClassName = `flashcard-menu ${isMenuOpen ? 'open' : ''}`;
 
+  const handlePremadeSetClick = (premadeSet) => {
+    onCloseMenu();
+    onPremadeSetClick(premadeSet);
+  };
+
   return (
     <div className={menuClassName}>
       <button className="close-button" onClick={onCloseMenu}>
@@ -25,8 +30,8 @@ const FlashcardMenu = ({
           </li>
         ))}
       </ul>
-      <button onClick={() => onPremadeSetClick(premadeSet1)}>meow</button>
-      <button onClick={() => onPremadeSetClick(premadeSet2)}>woof</button>
+      <button onClick={() => handlePremadeSetClick(premadeSet1)}>meow</button>
+      <button onClick={() => handlePremadeSetClick(premadeSet2)}>woof</button>
       <div>
         <button onClick={onBackToLandingClick}>Back to Landing Page</button>
       </div>

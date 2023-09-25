@@ -3,7 +3,7 @@ import './App.css';
 import FlashcardList from './components/FlashcardList';
 import Flashcard from './components/Flashcard';
 import FlashcardMenu from './components/FlashcardMenu';
-import FlashcardListMode from './components/FlashcardListMode'; // Import the new component
+import FlashcardListMode from './components/FlashcardListMode';
 import premadeSet1 from './components/flashcardSets/premadeSet1';
 import premadeSet2 from './components/flashcardSets/premadeSet2';
 
@@ -42,8 +42,8 @@ function App() {
     setSelectedSet(premadeSet);
     setCurrentCardIndex(0);
     setLandingPage(false);
-    setFlashcardMode(false); // Ensure flashcard mode is turned off
-    setListMode(true); // Turn on list mode
+    setFlashcardMode(false);
+    setListMode(true);
   };
   
 
@@ -67,14 +67,12 @@ function App() {
     let newIndex;
 
     if (isFlashcardMode) {
-      // If in flashcard mode, increment the current index
       newIndex = currentCardIndex === null ? 0 : currentCardIndex + 1;
 
       if (newIndex >= selectedSet.flashcards.length) {
         newIndex = 0;
       }
     } else {
-      // If not in flashcard mode, generate a random index
       newIndex = Math.floor(Math.random() * selectedSet.flashcards.length);
     }
 
@@ -118,7 +116,7 @@ function App() {
           isMenuOpen={isMenuOpen}
           onCloseMenu={handleCloseMenu}
           onPremadeSetClick={handlePremadeSetClick}
-          onBackToLandingClick={handleBackToLandingClick} // Pass the function here
+          onBackToLandingClick={handleBackToLandingClick}
         />
       )}
 
@@ -126,9 +124,9 @@ function App() {
         <div className="toggle-button">
           <button id="toggleButton" onClick={toggleMode}>
             {isFlashcardMode ? (
-              <img id="ListButton" src={process.env.PUBLIC_URL + 'list-solid.svg'} alt="Listbutton" />
+              <img id="ListButton" src={process.env.PUBLIC_URL + '/Icons/list-solid.svg'} alt="Listbutton" />
             ) : (
-              <img id="FlashcardButton" src={process.env.PUBLIC_URL + 'bolt-lightning-solid.svg'} alt="FlashcardButton" />
+              <img id="FlashcardButton" src={process.env.PUBLIC_URL + '/Icons/bolt-lightning-solid.svg'} alt="FlashcardButton" />
             )}
           </button>
         </div>
@@ -136,9 +134,9 @@ function App() {
 
       <div className="flashcard-container">
         {isLandingPage ? (
-          <div>
-            <h1>Welcome!</h1>
-            <p>Select a flashcard set to get started.</p>
+          <div id="LandingPageTitle">
+            <h1 id="welcomeTitle">Welcome!</h1>
+            <p id="welcomeTitle">select a flashcard set to get started</p>
           </div>
         ) : selectedSet && isFlashcardMode ? (
           <FlashcardList
@@ -151,7 +149,7 @@ function App() {
           />
           
         ) : isListMode && selectedSet && (
-          <FlashcardListMode flashcards={selectedSet.flashcards} /> // Render the new component in list mode
+          <FlashcardListMode flashcards={selectedSet.flashcards} />
         )}
         {selectedSet && !isFlashcardMode && !isListMode && (
           <button className="back-to-landing" onClick={handleBackToLandingClick}>

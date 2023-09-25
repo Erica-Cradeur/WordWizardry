@@ -5,114 +5,70 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
-  background-color: black;
-  background-image: url('/public/henry-be-TCsCykbwSJw-unsplash(1).jpg');
+  background-image: url('/public/Imgs/henry-be-TCsCykbwSJw-unsplash(1).jpg');
 }
 
 .App {
   text-align: center;
-  margin: 20px;
+  margin: 2em;
+}
+
+#mainLogo{
+  width: 7.5em;
+  padding-left: 1.75em;
+  position:fixed;
+  left:0;
+  top:0;
+}
+
+#LandingPageTitle{
+  padding-top: 10em;
+  text-shadow: .2em .2em .2em #75918B;
 }
 
 .flashcard {
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin: 10px;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: .25em solid #ccc;
+  padding: 1em;
+  background-color: transparent;
+  border-radius: 2em;
 }
 
 .flashcard-list{
-  display:flex;
-  flex-flow: row wrap;
-  align-items: center;
-  padding-top: 1em;
-  justify-content: center;
-  
+  /*padding-top: 5em;
+  justify-content: center;*/
 }
 
 .flashcard-container{
-  display:flex;
+  /*display:flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  flex-direction: column;*/
 }
+
 
 .flashcard textarea {
   width: 100%;
   height: 100px;
 }
 
-.add-card {
-  margin: 20px 0;
-}
-
-.add-card input {
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  margin-right: 10px;
-}
-
-.add-card button {
-  padding: 5px 10px;
-  color: #fff;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-}
-
-.centered-prompt {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 999;
-}
-
-.prompt-content {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  background: none;
-	color: inherit;
-	border: none;
-	padding: 0;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
-  margin: 5em;
-}
-
-#mainLogo{
-  width: 7.5em;
-  padding-left: 1em;
-  position:fixed;
-  left:0;
-  top:0;
+.flashcard p{
+  background: transparent;
 }
 
 .NextButton{
-  font-size: 20px;
-  background: none;
-	color: inherit;
+  background: transparent;
 	border: solid #75918B;
   border-radius: .5em;
   margin-top: 1em;
-	padding: 1em;
+	padding: .5em;
 	font: inherit;
 	cursor: pointer;
-	outline: inherit;
-
 }
 
-#toggleButton, #addButton{
+.NextButton:hover{
+  transform: scale(1.2);
+}
+
+#toggleButton{
   background: none;
 	color: inherit;
 	border: none;
@@ -120,10 +76,6 @@
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
-}
-
-#addButton{
-  height: 2em;
 }
 
 #FlashcardButton, #ListButton{
@@ -142,7 +94,6 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -157,11 +108,11 @@
   max-width: 80%;
   position: fixed;
   top: 0;
-  left: -100%; /* Initially off the screen to the left */
+  left: -100%;
   height: 100%;
-  width: 300px; /* Set the width you want for the menu */
-  transition: left 0.3s ease-in-out; /* Add a transition for smooth sliding */
-  z-index: 1000; /* Set a higher z-index value */
+  width: 300px;
+  transition: left 0.3s ease-in-out;
+  z-index: 1000;
 }
 
 .open {

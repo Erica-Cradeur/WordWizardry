@@ -4,13 +4,14 @@
     height: 150px;
     position: relative;
     transform-style: preserve-3d;
-    transition: transform 0.5s;
+    transition: transform 0.15s;
     cursor: pointer;
   }
 
   .flashcardList{
     display: flex;
     align-items: center;
+    flex-direction: row;
     justify-content: center;
   }
 
@@ -18,7 +19,7 @@
     width: 100%;
     height: 100%;
     transform-style: preserve-3d;
-    transition: transform 0.5s;
+    transition: transform 0.15s;
   }
   
   .flashcard-front,
@@ -28,7 +29,7 @@
     position: absolute;
     backface-visibility: hidden;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
   }
@@ -36,6 +37,10 @@
   .flashcard.flipped {
     transform: rotateY(180deg);
     justify-content: center;
+  }
+
+  .flashcard-word{
+    background: transparent;
   }
   
   .flashcard-back {
@@ -45,12 +50,21 @@
     flex-direction: column;
   }
 
+  #FlashcardTextArea{
+    border: none;
+    text-align: center;
+    background: transparent;
+    margin-top: 2em;
+    height: 3em;
+    width: 100%;
+  }
+
   #flashcardTextAreaBack{
     height: 5em;
     width: auto;
     background: transparent;
   }
-
+  
 @media screen and (max-width: 768px) {
     .flashcard {
       width: 100%; 
@@ -63,44 +77,4 @@
       width: calc(20% - 20px);
       margin: 10px;
     }
-  }
-  
-  #editButton, #deleteButton{
-    width: 2em;
-    border: none;
-    background-color: transparent;
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-  #buttons{
-    padding: 1em;
-    right:0;
-    bottom:0;
-    position:absolute;
-    
-  }
-
-  #FlashcardTextArea{
-    border: none;
-    text-align: center;
-    background: transparent;
-    margin-top: 2em;
-    height: 3em;
-    width: 100%;
-  }
-
-  .saveButton{
-    padding: 1em;
-    right:0;
-    bottom:0;
-    position:absolute;
-    text-decoration: none;
-    background: none;
-	  color: inherit;
-	  border: none;
-	  padding: 0;
-	  font: inherit;
-	  cursor: pointer;
-	  outline: inherit;
   }
