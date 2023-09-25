@@ -1,6 +1,7 @@
 import React from 'react';
 import premadeSet1 from './flashcardSets/premadeSet1.js';
 import premadeSet2 from './flashcardSets/premadeSet2.js';
+import './Flashcard.css';
 
 const FlashcardMenu = ({
   flashcardSets,

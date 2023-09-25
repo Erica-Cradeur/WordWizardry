@@ -31,19 +31,17 @@
   padding: 1em;
   background-color: transparent;
   border-radius: 2em;
+  margin: 5em;
 }
 
-.flashcard-list{
-  /*padding-top: 5em;
-  justify-content: center;*/
-}
-
-.flashcard-container{
-  /*display:flex;
+.flashcard-container, .flashcard-list{
+  margin-top: 4em;
+  margin: 5em;
+  display:flex;
   align-items: center;
-  flex-direction: column;*/
+  justify-content: center;
+  flex-direction: row;
 }
-
 
 .flashcard textarea {
   width: 100%;

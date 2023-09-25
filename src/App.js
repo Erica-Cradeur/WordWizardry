@@ -147,7 +147,6 @@ function App() {
             currentCardIndex={currentCardIndex}
             displayNextCard={displayNextCard}
           />
-          
         ) : isListMode && selectedSet && (
           <FlashcardListMode flashcards={selectedSet.flashcards} />
         )}
