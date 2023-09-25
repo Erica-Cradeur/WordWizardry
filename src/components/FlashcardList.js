@@ -1,5 +1,6 @@
 import React from 'react';
 import Flashcard from './Flashcard';
+import './Flashcard.css';
 
 const FlashcardList = ({
   flashcards,
@@ -14,26 +15,35 @@ const FlashcardList = ({
       {isFlashcardMode ? (
         <div>
           {currentCardIndex !== null && flashcards.length > 0 && (
-            <Flashcard
+            <div>
+              <Flashcard
               card={flashcards[currentCardIndex]}
               onDelete={onDelete}
               onUpdate={onUpdate}
-            />
+              />
+            </div>
           )}
           {flashcards.length > 0 && (
-            <button className="NextButton" onClick={displayNextCard}>
-              Next
-            </button>
+
+            <div id="nextButtonDiv">
+              <button className="NextButton" onClick={displayNextCard}>
+                <img id="nextButtonArrow" src={process.env.PUBLIC_URL + '/Icons/circle-right-regular.svg'} alt="nextButton" />
+              </button>
+            </div>
           )}
         </div>
+
       ) : (
+
         flashcards.map((flashcard) => (
-          <Flashcard
-            key={flashcard.id}
-            card={flashcard}
-            onDelete={onDelete}
-            onUpdate={onUpdate}
-          />
+          <div>
+            <Flashcard
+              key={flashcard.id}
+              card={flashcard}
+              onDelete={onDelete}
+              onUpdate={onUpdate}
+            />
+          </div>
         ))
       )}
     </div>

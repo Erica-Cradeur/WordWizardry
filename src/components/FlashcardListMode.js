@@ -10,20 +10,21 @@ const FlashcardListMode = ({ flashcards }) => {
 
   return (
     <div className="flashcard-list">
-        {flashcards.map((flashcard, index) => (
-          <p key={flashcard.id}>
-            <div className="flashcard">
-              <p>{flashcard.english}</p>
-              <button onClick={toggleDetails.bind(null, index)}>Show</button>
+      {flashcards.map((flashcard, index) => (
+        <div key={flashcard.id} className="flashcard-list-item">
+          <img id="flashcardImg" src={flashcard.englishImage} alt="English" />
+          <p>{flashcard.english}</p>
+          <button id="showButtonImg" onClick={toggleDetails.bind(null, index)}>
+            <img id="showButton" src={process.env.PUBLIC_URL + '/Icons/eye-solid.svg'} alt="showButton" />
+          </button>
+          {showDetailsIndex === index && (
+            <div className="flashcard-details">
+              <p id="flashcardDetailsWords">{flashcard.french}</p>
+              <p id="flashcardDetailsWords">{flashcard.phonetic}</p>
             </div>
-            {showDetailsIndex === index && (
-              <div>
-                <p>French: {flashcard.french}</p>
-                <p>Phonetic: {flashcard.phonetic}</p>
-              </div>
-            )}
-          </p>
-        ))}
+          )}
+        </div>
+      ))}
     </div>
   );
 };

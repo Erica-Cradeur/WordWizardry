@@ -17,7 +17,7 @@ const Flashcard = ({ card }) => {
       <div className="flashcard-inner">
         <div className={`flashcard-front ${isFlipped ? 'hidden' : ''}`}>
           <div className="flashcard-word">
-            <p>{card.english}</p>
+            <img id="flashcardImg" src={card.englishImage} alt="English" />
           </div>
         </div>
         <div className={`flashcard-back ${isFlipped ? '' : 'hidden'}`}>

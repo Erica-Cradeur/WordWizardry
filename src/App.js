@@ -139,20 +139,19 @@ function App() {
             <p id="welcomeTitle">select a flashcard set to get started</p>
           </div>
         ) : selectedSet && isFlashcardMode ? (
-          <FlashcardList
+          <div id="flashcardFlashMode"><FlashcardList
             flashcards={selectedSet.flashcards}
             onDelete={handleDeleteCard}
             onUpdate={handleUpdateCard}
             isFlashcardMode={isFlashcardMode}
             currentCardIndex={currentCardIndex}
             displayNextCard={displayNextCard}
-          />
+          /></div>
         ) : isListMode && selectedSet && (
           <FlashcardListMode flashcards={selectedSet.flashcards} />
         )}
         {selectedSet && !isFlashcardMode && !isListMode && (
           <button className="back-to-landing" onClick={handleBackToLandingClick}>
-            Back to Landing Page
           </button>
         )}
       </div>

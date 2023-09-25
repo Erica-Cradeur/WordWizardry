@@ -5,6 +5,16 @@
     transform-style: preserve-3d;
     transition: transform 0.15s;
     cursor: pointer;
+    
+    border: .25em solid white;
+    padding: 1em;
+    background-color: transparent;
+    border-radius: 2em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
 
   .flashcard-inner {
@@ -21,6 +31,10 @@
     position: absolute;
     backface-visibility: hidden;
     background: transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .flashcard.flipped {
@@ -31,12 +45,45 @@
   .flashcard-word{
     background: transparent;
   }
+
+  .flashcard textarea {
+    width: 100%;
+    height: 100px;
+  }
+  
+  .flashcard p{
+    background: transparent;
+  }
   
   .flashcard-back {
     transform: rotateY(180deg);
     background: transparent;
     display: flex;
     flex-direction: column;
+  }
+
+  .flashcard-container{
+    margin-top: 7.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+
+  }
+  
+  .flashcard-list{
+    display: flex;
+    flex-direction: row;
+    margin: 5em;
+  }
+
+  #flashcarddiv{
+    width: 10em;
+  }
+
+  #flashcard-word{
+    width: 100%;
   }
 
   #FlashcardTextArea{
@@ -53,17 +100,93 @@
     width: auto;
     background: transparent;
   }
+
+  .flashcard-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2.5em;
+    margin-top: 1em !important;
+  }
+  
+  .flashcard-list-item {
+    width: 7.5em;
+    height: 10em;
+    padding: 1em;
+    background: transparent;
+    border: .25em solid white;
+    border-radius: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
   
 @media screen and (max-width: 768px) {
-    .flashcard {
+    .flashcard-list-item, .flashcarddiv {
       width: 100%; 
       margin: 10px 0;
     }
   }
 
   @media screen and (min-width: 769px) {
-    .flashcard {
-      width: calc(20% - 20px);
+    .flashcard-list-item, .flashcarddiv {
+      width: 7.5em;
       margin: 10px;
     }
   }
+
+  .NextButton{
+    background: transparent;
+    border: none;
+    margin-top: 1em;
+    padding: .5em;
+    font: inherit;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #NextButton{
+      background: transparent;
+      border: none;
+      margin-top: 1em;
+      padding: .5em;
+      font: inherit;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  #nextButtonDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+  #nextButtonArrow{
+    width: 2.5em;
+    background: transparent;
+    display: flex;
+    float: right;
+  }
+  
+  .NextButton:hover{
+    transform: scale(1.2);
+  }
+
+  #flashcardImg{
+    height: 7.5em;
+    width: auto;
+  }
+
+  #flashcardFlashMode{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  

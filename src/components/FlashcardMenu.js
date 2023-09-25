@@ -19,10 +19,15 @@ const FlashcardMenu = ({
   };
 
   return (
-    <div className={menuClassName}>
+    <div id="navBarButtons" className={menuClassName}><div>
       <button className="close-button" onClick={onCloseMenu}>
-        x
+      <img id="ExitButton" src={process.env.PUBLIC_URL + '/Icons/circle-xmark-solid.svg'} alt="ExitButton" />
       </button>
+      <div className="HomeButton">
+        <button id="HomeButton" onClick={onBackToLandingClick}><img id="homeImg" src={process.env.PUBLIC_URL + '/Icons/house-solid.svg'} alt="HomeButton" /></button>
+      </div>
+      </div>
+      <div>
       <h2>Vocabulary Sets</h2>
       <ul>
         {flashcardSets.map((set, index) => (
@@ -31,11 +36,9 @@ const FlashcardMenu = ({
           </li>
         ))}
       </ul>
-      <button onClick={() => handlePremadeSetClick(premadeSet1)}>meow</button>
-      <button onClick={() => handlePremadeSetClick(premadeSet2)}>woof</button>
-      <div>
-        <button onClick={onBackToLandingClick}>Back to Landing Page</button>
-      </div>
+      <button id="setButton" onClick={() => handlePremadeSetClick(premadeSet1)}>meow</button>
+      <button id="setButton" onClick={() => handlePremadeSetClick(premadeSet2)}>woof</button>
+    </div>
     </div>
   );
 };
