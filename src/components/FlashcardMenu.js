@@ -1,6 +1,5 @@
 import React from 'react';
-import premadeSet1 from './flashcardSets/premadeSet1.js';
-import premadeSet2 from './flashcardSets/premadeSet2.js';
+import GeographicFeatures from './flashcardSets/GeographicFeatures.js';
 import './Flashcard.css';
 
 const FlashcardMenu = ({
@@ -36,8 +35,7 @@ const FlashcardMenu = ({
           </li>
         ))}
       </ul>
-      <button id="setButton" onClick={() => handlePremadeSetClick(premadeSet1)}>meow</button>
-      <button id="setButton" onClick={() => handlePremadeSetClick(premadeSet2)}>woof</button>
+      <button id="setButton" onClick={() => handlePremadeSetClick(GeographicFeatures)}>Geographic Features</button>
     </div>
     </div>
   );

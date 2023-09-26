@@ -4,8 +4,7 @@ import FlashcardList from './components/FlashcardList';
 import Flashcard from './components/Flashcard';
 import FlashcardMenu from './components/FlashcardMenu';
 import FlashcardListMode from './components/FlashcardListMode';
-import premadeSet1 from './components/flashcardSets/premadeSet1';
-import premadeSet2 from './components/flashcardSets/premadeSet2';
+
 
 function App() {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -48,14 +47,14 @@ function App() {
   
 
   useEffect(() => {
-    const storedFlashcards = JSON.parse(localStorage.getItem('flashcards'));
+    const storedFlashcards = JSON.parse(localStorage.getItem('flashcardSets'));
     if (storedFlashcards) {
       setFlashcards(storedFlashcards);
     }
   }, []);
 
   useEffect(() => {
-    localStorage.setItem('flashcards', JSON.stringify(flashcards));
+    localStorage.setItem('flashcardSets', JSON.stringify(flashcardSets));
   }, [flashcards]);
 
   const displayNextCard = () => {

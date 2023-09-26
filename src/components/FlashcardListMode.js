@@ -20,7 +20,7 @@ const FlashcardListMode = ({ flashcards }) => {
           {showDetailsIndex === index && (
             <div className="flashcard-details">
               <p id="flashcardDetailsWords">{flashcard.french}</p>
-              <p id="flashcardDetailsWords">{flashcard.phonetic}</p>
+              <p id="flashcardDetailsWords">/{flashcard.phonetic}/</p>
             </div>
           )}
         </div>
