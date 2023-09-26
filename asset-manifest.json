@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.423330d8.css",
+    "main.js": "/static/js/main.abb9d46c.js",
+    "static/media/henry-be-TCsCykbwSJw-unsplash(1).jpg": "/static/media/henry-be-TCsCykbwSJw-unsplash(1).289d654e1a20ddabdc2f.jpg",
+    "index.html": "/index.html",
+    "main.423330d8.css.map": "/static/css/main.423330d8.css.map",
+    "main.abb9d46c.js.map": "/static/js/main.abb9d46c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.423330d8.css",
+    "static/js/main.abb9d46c.js"
+  ]
+}
