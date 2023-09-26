@@ -1,6 +1,5 @@
 .flashcard {
     perspective: 1000px;
-    height: 150px;
     position: relative;
     transform-style: preserve-3d;
     transition: transform 0.15s;
@@ -63,7 +62,7 @@
   }
 
   .flashcard-container{
-    margin-top: 7.5em;
+    margin-top: 5em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -79,7 +78,8 @@
   }
 
   #flashcarddiv{
-    width: 10em;
+    width: 17.5em;
+    height: 15em;
   }
 
   #flashcard-word{
@@ -110,8 +110,8 @@
   }
   
   .flashcard-list-item {
-    width: 7.5em;
-    height: 10em;
+    max-width: 40em;
+    height: 15em;
     padding: 1em;
     background: transparent;
     border: .25em solid white;
@@ -125,14 +125,16 @@
   
 @media screen and (max-width: 768px) {
     .flashcard-list-item, .flashcarddiv {
-      width: 100%; 
+      width: 17.5em;
+      max-width: 30em; 
       margin: 10px 0;
     }
   }
 
   @media screen and (min-width: 769px) {
     .flashcard-list-item, .flashcarddiv {
-      width: 7.5em;
+      width: 17.5em;
+      max-width: 30em;
       margin: 10px;
     }
   }
@@ -179,8 +181,8 @@
   }
 
   #flashcardImg{
-    max-height: 7.5em;
-    max-width: 9em;
+    max-height: 12.5em;
+    max-width: 15em;
   }
 
   #flashcardFlashMode{
