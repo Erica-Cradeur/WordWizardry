@@ -78,7 +78,7 @@
   top: 0;
   left: -100%;
   height: auto;
-  width: 17.5em;
+  width: auto;
   transition: left 0.3s ease-in-out;
   z-index: 1000;
   display: flex;
@@ -125,6 +125,14 @@
   left: 0;
 }
 
+#ListButton:hover, #FlashcardButton:hover{
+  transform: scale(1.2);
+}
+
+#ListButton, #FlashcardButton{
+  background: transparent;
+}
+
 #setButton:hover{
   transform: scale(1.1);
 }
@@ -152,6 +160,10 @@
   font: inherit;
   cursor: pointer;
   outline: inherit;
+}
+
+#showButtonImg:hover{
+  transform: scale(1.2);
 }
 
 #showButton{

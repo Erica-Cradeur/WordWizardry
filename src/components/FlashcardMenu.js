@@ -27,7 +27,7 @@ const FlashcardMenu = ({
       </div>
       </div>
       <div>
-      <h2>Vocabulary Sets</h2>
+      <h2>Vocabulaire</h2>
       <ul>
         {flashcardSets.map((set, index) => (
           <li key={index} onClick={() => onSelectSet(set)}>
@@ -35,7 +35,7 @@ const FlashcardMenu = ({
           </li>
         ))}
       </ul>
-      <button id="setButton" onClick={() => handlePremadeSetClick(GeographicFeatures)}>Geographic Features</button>
+      <button id="setButton" onClick={() => handlePremadeSetClick(GeographicFeatures)}>Caractéristiques Géographiques</button>
     </div>
     </div>
   );

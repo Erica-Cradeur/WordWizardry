@@ -134,8 +134,8 @@ function App() {
       <div className="flashcard-container">
         {isLandingPage ? (
           <div id="LandingPageTitle">
-            <h1 id="welcomeTitle">Welcome!</h1>
-            <p id="welcomeTitle">select a flashcard set to get started</p>
+            <h1 id="welcomeTitle">Bonjour!</h1>
+            <p id="welcomeTitle">sélectionnez le logo des ensembles de vocabulaire</p>
           </div>
         ) : selectedSet && isFlashcardMode ? (
           <div id="flashcardFlashMode"><FlashcardList
