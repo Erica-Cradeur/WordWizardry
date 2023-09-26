@@ -105,7 +105,7 @@ function App() {
   return (
     <div className="App">
       <div className="menu-button" onClick={toggleMenu}>
-        <img id="mainLogo" src={process.env.PUBLIC_URL + '/Icons/house-solid.svg'} alt="logo" />
+        <img id="mainLogo" src={process.env.PUBLIC_URL + '/WordWizardryIcon.png'} alt="logo" />
       </div>
 
       {isMenuOpen && (
