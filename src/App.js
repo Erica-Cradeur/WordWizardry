@@ -57,26 +57,35 @@ function App() {
     localStorage.setItem('flashcardSets', JSON.stringify(flashcardSets));
   }, [flashcards]);
 
+  function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  }
+
   const displayNextCard = () => {
-    if (!selectedSet || !selectedSet.flashcards || selectedSet.flashcards.length === 0) {
-      console.log('No flashcards in the selected set to display');
-      return;
-    }
+  if (!selectedSet || !selectedSet.flashcards || selectedSet.flashcards.length === 0) {
+    console.log('No flashcards in the selected set to display');
+    return;
+  }
 
-    let newIndex;
+  // Shuffle the flashcards array
+  const shuffledFlashcards = shuffleArray(selectedSet.flashcards);
 
-    if (isFlashcardMode) {
-      newIndex = currentCardIndex === null ? 0 : currentCardIndex + 1;
+  // Find the index of the current card in the shuffled array
+  const currentIndex = shuffledFlashcards.findIndex(
+    (card) => card.id === selectedSet.flashcards[currentCardIndex].id
+  );
 
-      if (newIndex >= selectedSet.flashcards.length) {
-        newIndex = 0;
-      }
-    } else {
-      newIndex = Math.floor(Math.random() * selectedSet.flashcards.length);
-    }
+  // Calculate the index of the next card, considering looping back to the start if at the end
+  const newIndex = (currentIndex + 1) % shuffledFlashcards.length;
 
-    setCurrentCardIndex(newIndex);
-  };
+  // Set the current card index to the new index
+  setCurrentCardIndex(newIndex);
+};
+
 
   const handleDeleteCard = (id) => {
     const updatedFlashcards = flashcards.filter((card) => card.id !== id);
