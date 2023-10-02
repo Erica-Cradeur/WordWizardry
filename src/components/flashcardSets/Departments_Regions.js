@@ -299,8 +299,8 @@ const Departments_Regions = {
         },
         {
             id: 49,
-            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/France_Midi_45%C2%B0_Latitude.jpg/220px-France_Midi_45%C2%B0_Latitude.jpg',
-            french: 'Le Midi',
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Midi-Pyr%C3%A9n%C3%A9es_in_France.svg/1024px-Midi-Pyr%C3%A9n%C3%A9es_in_France.svg.png',
+            french: 'Le Midi-Pyrénées',
             phonetic: 'lə mi.di',
         },
         {
