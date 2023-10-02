@@ -38,8 +38,8 @@ const FlashcardMenu = ({
         ))}
       </ul>
       <button id="setButton" onClick={() => handlePremadeSetClick(GeographicFeatures)}>Caractéristiques Géographiques</button>
-      <button id="setButton" onClick={() => handlePremadeSetClick(Numbers0_50)}>Nombres 0-50</button>
       <button id="setButton" onClick={() => handlePremadeSetClick(Animals)}>Animaux</button>
+      <button id="setButton" onClick={() => handlePremadeSetClick(Numbers0_50)}>Nombres 0-50</button>
     </div>
     </div>
   );
