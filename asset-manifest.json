@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/WordWizardry/static/css/main.a42fe839.css",
-    "main.js": "/WordWizardry/static/js/main.3797d560.js",
+    "main.js": "/WordWizardry/static/js/main.36c0c49e.js",
     "static/media/henry-be-TCsCykbwSJw-unsplash(1).jpg": "/WordWizardry/static/media/henry-be-TCsCykbwSJw-unsplash(1).289d654e1a20ddabdc2f.jpg",
     "index.html": "/WordWizardry/index.html",
     "main.a42fe839.css.map": "/WordWizardry/static/css/main.a42fe839.css.map",
-    "main.3797d560.js.map": "/WordWizardry/static/js/main.3797d560.js.map"
+    "main.36c0c49e.js.map": "/WordWizardry/static/js/main.36c0c49e.js.map"
   },
   "entrypoints": [
     "static/css/main.a42fe839.css",
-    "static/js/main.3797d560.js"
+    "static/js/main.36c0c49e.js"
   ]
 }
