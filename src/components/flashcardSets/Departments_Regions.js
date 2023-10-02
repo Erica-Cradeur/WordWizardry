@@ -1,0 +1,407 @@
+const Departments_Regions = {
+    name: 'Departments_Regions',
+    flashcards: [
+        {
+            id: 1,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Auvergne_in_France.svg/250px-Auvergne_in_France.svg.png',
+            french: 'L’Auvergne',
+            phonetic: 'lo.vɛʁɲ',
+        },
+        {
+            id: 2,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Cantal-Position.svg/250px-Cantal-Position.svg.png',
+            french: 'Le Cantal',
+            phonetic: 'lə kɑ̃tal',
+        },
+        {
+            id: 3,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Dordogne-Position.svg/1200px-Dordogne-Position.svg.png',
+            french: 'La Dordogne',
+            phonetic: 'la dɔʁ.dɔɲ',
+        },
+        {
+            id: 4,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Finist%C3%A8re-Position.svg/langfr-280px-Finist%C3%A8re-Position.svg.png',
+            french: 'Le Finistère',
+            phonetic: 'lə fi.nis.tɛʁ',
+        },
+        {
+            id: 5,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Pays_de_la_Loire_region_locator_map2.svg/250px-Pays_de_la_Loire_region_locator_map2.svg.png',
+            french: 'La Loire',
+            phonetic: 'la lwaʁ',
+        },
+        {
+            id: 6,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Manche-Position.svg/250px-Manche-Position.svg.png',
+            french: 'La Manche',
+            phonetic: 'la mɑ̃ʃ',
+        },
+        {
+            id: 7,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Ille-et-Vilaine-Position.svg/250px-Ille-et-Vilaine-Position.svg.png',
+            french: 'L’Ille-et-Vilaine',
+            phonetic: 'li.l‿e vi.lɛn',
+        },
+        {
+            id: 8,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Indre-et-Loire-Position.svg/250px-Indre-et-Loire-Position.svg.png',
+            french: 'L’Indre-et-Loire',
+            phonetic: 'lɛ̃dʁ‿e lwaʁ',
+        },
+        {
+            id: 9,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Loir-et-Cher-Position.svg/250px-Loir-et-Cher-Position.svg.png',
+            french: 'Le Loir-et-Cher',
+            phonetic: 'lə lwaʁ‿e ʃɛʁ',
+        },
+        {
+            id: 10,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Maine-et-Loire-Position.svg/250px-Maine-et-Loire-Position.svg.png',
+            french: 'Le Maine-et-Loire',
+            phonetic: 'lə mɛn‿e lwaʁ',
+        },
+        {
+            id: 11,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Meurthe-et-Moselle-Position.svg/250px-Meurthe-et-Moselle-Position.svg.png',
+            french: 'La Meurthe-et-Moselle',
+            phonetic: 'la møʁt‿e mo.zɛl',
+        },
+        {
+            id: 12,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Sa%C3%B4ne-et-Loire-Position.svg/250px-Sa%C3%B4ne-et-Loire-Position.svg.png',
+            french: 'La Saône-et-Loire',
+            phonetic: 'la son‿e lwaʁ',
+        },
+        {
+            id: 13,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Tarn-et-Garonne-Position.svg/250px-Tarn-et-Garonne-Position.svg.png',
+            french: 'Le Tarn-et-Garonne',
+            phonetic: 'lə taʁn‿e ɡa.ʁɔn',
+        },
+        {
+            id: 14,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Bouches-du-Rh%C3%B4ne-Position.svg/250px-Bouches-du-Rh%C3%B4ne-Position.svg.png',
+            french: 'Les Bouches-du-Rhône',
+            phonetic: 'le buʃ dy ʁon',
+        },
+        {
+            id: 15,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/C%C3%B4tes-d%E2%80%99Armor-Position.svg/250px-C%C3%B4tes-d%E2%80%99Armor-Position.svg.png',
+            french: 'Les Côtes-d’Armor',
+            phonetic: 'le kot daʁ.mɔʁ',
+        },
+        {
+            id: 16,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/C%C3%B4te-d%E2%80%99Or-Position.svg/250px-C%C3%B4te-d%E2%80%99Or-Position.svg.png',
+            french: 'La Côte-d’Or',
+            phonetic: 'la kot dɔʁ',
+        },
+        {
+            id: 17,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Hauts-de-Seine-Position.svg/250px-Hauts-de-Seine-Position.svg.png',
+            french: 'Les Hauts-de-Seine',
+            phonetic: 'le oz də sɛn',
+        },
+        {
+            id: 18,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Puy-de-D%C3%B4me-Position.svg/250px-Puy-de-D%C3%B4me-Position.svg.png',
+            french: 'Le Puy-de-Dôme',
+            phonetic: 'lə pɥi də dɔm',
+        },
+        {
+            id: 19,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Seine-Saint-Denis-Position.svg/250px-Seine-Saint-Denis-Position.svg.png',
+            french: 'La Seine-Saint-Denis',
+            phonetic: 'la sɛn sɛ̃ də.ni',
+        },
+        {
+            id: 20,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Val-de-Marne-Position.svg/2000px-Val-de-Marne-Position.svg.png',
+            french: 'Le Val-de-Marne',
+            phonetic: 'lə val də maʁn',
+        },
+        {
+            id: 21,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Alpes-Maritimes-Position.svg/250px-Alpes-Maritimes-Position.svg.png',
+            french: 'Les Alpes-Maritimes',
+            phonetic: 'le‿alp ma.ʁi.tim',
+        },
+
+        {
+            id: 22,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Bas-Rhin-Position.svg/250px-Bas-Rhin-Position.svg.png',
+            french: 'Le Bas-Rhin',
+            phonetic: 'lə ba.ʁɛ̃',
+        },
+
+        {
+            id: 23,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Haute-Loire-Position.svg/250px-Haute-Loire-Position.svg.png',
+            french: 'La Haute-Loire',
+            phonetic: 'la ot lwaʁ',
+        },
+
+        {
+            id: 24,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Haute-Savoie-Position.svg/250px-Haute-Savoie-Position.svg.png',
+            french: 'La Haute-Savoie',
+            phonetic: 'la ot sa.vwaʁ',
+        },
+
+        {
+            id: 25,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Haute-Vienne-Position.svg/250px-Haute-Vienne-Position.svg.png',
+            french: 'La Haute-Vienne',
+            phonetic: 'la ot vjɛn',
+        },
+
+        {
+            id: 26,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Pyr%C3%A9n%C3%A9es-Atlantiques-Position.svg/250px-Pyr%C3%A9n%C3%A9es-Atlantiques-Position.svg.png',
+            french: 'Les Pyrénées-Atlantiques',
+            phonetic: 'le pi.ʁe.ne at.lɑ̃.tik',
+        },
+
+        {
+            id: 27,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Abu_Dhabi_Al_Ain.png/250px-Abu_Dhabi_Al_Ain.png',
+            french: 'L’Ain',
+            phonetic: 'lɛ̃',
+        },
+
+        {
+            id: 28,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Allier-Position.svg/250px-Allier-Position.svg.png',
+            french: 'L’Allier',
+            phonetic: 'a.lje',
+        },
+
+        {
+            id: 29,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Aveyron-Position.svg/1200px-Aveyron-Position.svg.png',
+            french: 'L’Aveyron',
+            phonetic: 'a.vɛ.ʁɔ̃',
+        },
+        {
+            id: 30,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Calvados-Position.svg/250px-Calvados-Position.svg.png',
+            french: 'Le Calvados',
+            phonetic: 'lə kal.va.do',
+        },
+        {
+            id: 31,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Cantal-Position.svg/250px-Cantal-Position.svg.png',
+            french: 'Le Cantal',
+            phonetic: 'lə kɑ̃tal',
+        },
+        {
+            id: 32,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Cher-Position.svg/250px-Cher-Position.svg.png',
+            french: 'Le Cher',
+            phonetic: 'lə ʃɛʁ',
+        },
+        {
+            id: 33,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Gard-Position.svg/250px-Gard-Position.svg.png',
+            french: 'Le Gard',
+            phonetic: 'lə ɡaʁ',
+        },
+        {
+            id: 34,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Gers-Position.svg/250px-Gers-Position.svg.png',
+            french: 'Le Gers',
+            phonetic: 'lə ʒɛʁ',
+        },
+        {
+            id: 35,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/H%C3%A9rault-Position.svg/250px-H%C3%A9rault-Position.svg.png',
+            french: 'L’Hérault',
+            phonetic: 'le.ʁo',
+        },
+        {
+            id: 36,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Jura-Position.svg/250px-Jura-Position.svg.png',
+            french: 'Le Jura',
+            phonetic: 'lə ʒy.ʁa',
+        },
+        {
+            id: 37,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Guadeloupe_in_France_2016.svg/250px-Guadeloupe_in_France_2016.svg.png',
+            french: 'La Guadeloupe',
+            phonetic: 'la ɡwa.də.lup',
+        },
+        {
+            id: 38,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Guyana_%28orthographic_projection%29.svg/250px-Guyana_%28orthographic_projection%29.svg.png',
+            french: 'La Guyana',
+            phonetic: 'la ɡi.ja.na',
+        },
+        {
+            id: 39,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/LocationMartinique.png/260px-LocationMartinique.png',
+            french: 'La Martinique',
+            phonetic: 'la maʁ.ti.nik',
+        },
+        {
+            id: 40,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/LocationMayotte.svg/260px-LocationMayotte.svg.png',
+            french: 'Mayotte',
+            phonetic: 'ma.jɔt',
+        },
+        {
+            id: 41,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/D%C3%A9partement_974_in_France_%28zoom%29.svg/1200px-D%C3%A9partement_974_in_France_%28zoom%29.svg.png',
+            french: 'La Réunion',
+            phonetic: 'la ʁe.y.njɔ̃',
+        },
+        {
+            id: 42,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/New_Caledonia_on_the_globe_%28small_islands_magnified%29_%28Polynesia_centered%29.svg/1200px-New_Caledonia_on_the_globe_%28small_islands_magnified%29_%28Polynesia_centered%29.svg.png',
+            french: 'La Nouvelle-Calédonie',
+            phonetic: 'la nu.vɛl ka.le.do.ni',
+        },
+        {
+            id: 43,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/French_Polynesia_on_the_globe_%28French_Polynesia_centered%29.svg/290px-French_Polynesia_on_the_globe_%28French_Polynesia_centered%29.svg.png',
+            french: 'La Polynésie',
+            phonetic: 'la po.li.ne.zi',
+        },
+        {
+            id: 44,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Saint_Pierre_and_Miquelon_in_France.svg/290px-Saint_Pierre_and_Miquelon_in_France.svg.png',
+            french: 'Saint-Pierre et Miquelon',
+            phonetic: 'sɛ̃.pjɛʁ e mi.klɔ̃',
+        },
+        {
+            id: 45,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/French_Southern_and_Antarctic_Lands_on_the_globe_%28Madagascar_centered%29.svg/1200px-French_Southern_and_Antarctic_Lands_on_the_globe_%28Madagascar_centered%29.svg.png',
+            french: 'Les Terres Australes et Antarctiques',
+            phonetic: 'le tɛʁ os.tʁal e‿t‿ɑ̃.taʁk.tik',
+        },
+        {
+            id: 46,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/GirondePays.png/350px-GirondePays.png',
+            french: 'Le Bordelais',
+            phonetic: 'lə bɔʁ.də.lɛ',
+        },
+        {
+            id: 47,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Languedoc_in_France_%281789%29.svg/220px-Languedoc_in_France_%281789%29.svg.png',
+            french: 'Le Languedoc',
+            phonetic: 'lə lɑ̃.ɡɛ.dɔk',
+        },
+        {
+            id: 48,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Limousin_in_France.svg/250px-Limousin_in_France.svg.png',
+            french: 'Le Limousin',
+            phonetic: 'lə li.mu.zɛ̃',
+        },
+        {
+            id: 49,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/France_Midi_45%C2%B0_Latitude.jpg/220px-France_Midi_45%C2%B0_Latitude.jpg',
+            french: 'Le Midi',
+            phonetic: 'lə mi.di',
+        },
+        {
+            id: 50,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Nord-Pas-de-Calais_in_France.svg/250px-Nord-Pas-de-Calais_in_France.svg.png',
+            french: 'Le Nord-Pas-de-Calais',
+            phonetic: 'lə nɔʁ pa də ka.lɛ',
+        },
+        {
+            id: 51,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Poitou_in_France_%281789%29.svg/1200px-Poitou_in_France_%281789%29.svg.png',
+            french: 'Le Poitou',
+            phonetic: 'lə pwa.tu',
+        },
+        {
+            id: 52,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/0/0c/Roussillon_in_France_%281789%29.svg',
+            french: 'Le Roussillon',
+            phonetic: 'lə ʁu.si.jɔ̃',
+        },
+        {
+            id: 53,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Carte_Alsace_2018.png/250px-Carte_Alsace_2018.png',
+            french: 'L’Alsace',
+            phonetic: 'al.sas',
+        },
+        {
+            id: 54,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Aquitaine_in_France.svg/250px-Aquitaine_in_France.svg.png',
+            french: 'L’Aquitaine',
+            phonetic: 'a.ki.tɛn',
+        },
+        {
+            id: 55,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Auvergne_in_France.svg/250px-Auvergne_in_France.svg.png',
+            french: 'L’Auvergne',
+            phonetic: 'lo.vɛʁɲ',
+        },
+        {
+            id: 56,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Bourgogne_in_France.svg/250px-Bourgogne_in_France.svg.png',
+            french: 'La Bourgogne',
+            phonetic: 'la buʁ.ɡɔɲ',
+        },
+        {
+            id: 57,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Localisation_Duch%C3%A9_de_Bretagne.svg/250px-Localisation_Duch%C3%A9_de_Bretagne.svg.png',
+            french: 'La Bretagne',
+            phonetic: 'la bʁɛ.taɲ',
+        },
+        {
+            id: 58,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/2/2e/Champagne-Ardenne_in_France.svg',
+            french: 'La Champagne',
+            phonetic: 'la ʃɑ̃.paɲ',
+        },
+        {
+            id: 59,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Provence-Alpes-C%C3%B4te_d%27Azur_region_locator_map2.svg/250px-Provence-Alpes-C%C3%B4te_d%27Azur_region_locator_map2.svg.png',
+            french: "La Côte d'Azur",
+            phonetic: 'la kot da.zyʁ',
+        },
+        {
+            id: 60,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Franche-Comt%C3%A9_in_France.svg/250px-Franche-Comt%C3%A9_in_France.svg.png',
+            french: 'La Franche-Comté',
+            phonetic: 'la fʁɑ̃ʃ kɔ̃.te',
+        },
+        {
+            id: 61,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/f/f3/Carte_Lorraine_2018.png',
+            french: 'La Lorraine',
+            phonetic: 'la lɔ.ʁɛn',
+        },
+        {
+            id: 62,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Basse-Normandie_in_France.svg/1200px-Basse-Normandie_in_France.svg.png',
+            french: 'La Normandie',
+            phonetic: 'la nɔʁ.mɑ̃.di',
+        },
+        {
+            id: 63,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Picardie_in_France.svg/250px-Picardie_in_France.svg.png',
+            french: 'La Picardie',
+            phonetic: 'la pi.kaʁ.di',
+        },
+        {
+            id: 64,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Provence_in_France_%281789%29.svg/1024px-Provence_in_France_%281789%29.svg.png',
+            french: 'La Provence',
+            phonetic: 'la pʁɔ.vɑ̃s',
+        },
+        {
+            id: 65,
+            englishImage: 'https://upload.wikimedia.org/wikipedia/commons/5/5a/Savoie_departement_locator_map.svg',
+            french: 'La Savoie',
+            phonetic: 'la sa.vwaʁ',
+        },
+
+
+    ],
+};
+
+export default Departments_Regions;

@@ -3,6 +3,7 @@ import './Flashcard.css';
 import GeographicFeatures from './flashcardSets/GeographicFeatures.js';
 import Numbers0_50 from './flashcardSets/Numbers0-50.js';
 import Animals from './flashcardSets/Animals.js';
+import Departments_Regions from './flashcardSets/Departments_Regions';
 
 const FlashcardMenu = ({
   flashcardSets,
@@ -39,7 +40,9 @@ const FlashcardMenu = ({
       </ul>
       <button id="setButton" onClick={() => handlePremadeSetClick(GeographicFeatures)}>Caractéristiques Géographiques</button>
       <button id="setButton" onClick={() => handlePremadeSetClick(Animals)}>Animaux</button>
+      <button id="setButton" onClick={() => handlePremadeSetClick(Departments_Regions)}>Departments & Regions</button>
       <button id="setButton" onClick={() => handlePremadeSetClick(Numbers0_50)}>Nombres 0-50</button>
+      
     </div>
     </div>
   );
