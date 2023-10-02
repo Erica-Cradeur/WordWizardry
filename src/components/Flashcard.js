@@ -25,7 +25,7 @@ const Flashcard = ({ card }) => {
             <p>{card.french}</p>
           </div>
           <div className="flashcard-word">
-            <p>{card.phonetic}</p>
+            <p>/{card.phonetic}/</p>
           </div>
         </div>
       </div>

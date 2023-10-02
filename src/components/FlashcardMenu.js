@@ -1,7 +1,8 @@
 import React from 'react';
-import GeographicFeatures from './flashcardSets/GeographicFeatures.js';
 import './Flashcard.css';
+import GeographicFeatures from './flashcardSets/GeographicFeatures.js';
 import Numbers0_50 from './flashcardSets/Numbers0-50.js';
+import Animals from './flashcardSets/Animals.js';
 
 const FlashcardMenu = ({
   flashcardSets,
@@ -38,6 +39,7 @@ const FlashcardMenu = ({
       </ul>
       <button id="setButton" onClick={() => handlePremadeSetClick(GeographicFeatures)}>Caractéristiques Géographiques</button>
       <button id="setButton" onClick={() => handlePremadeSetClick(Numbers0_50)}>Nombres 0-50</button>
+      <button id="setButton" onClick={() => handlePremadeSetClick(Animals)}>Animaux</button>
     </div>
     </div>
   );
